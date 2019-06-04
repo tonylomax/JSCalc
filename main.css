@@ -1,0 +1,13 @@
+.container {
+font-size: 2rem;
+width: 100%;
+display: grid;
+grid-template-columns: 25% 25% 25% 25%;
+grid-template-rows: 20% 20% 20% 20% 20%;
+grid-gap: 5%;
+
+}
+
+#num0, #num1, #num2, #num3, #num4, #num5, #num6, #num7, #num8, #num9 {
+    background-color: lightblue;
+}
