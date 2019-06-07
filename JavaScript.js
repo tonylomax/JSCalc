@@ -1,5 +1,10 @@
  let currentInput = document.getElementById("input")
 
+let sumConstantOne = 0  
+let sumConstantTwo = 0
+
+
+
 console.log(currentInput.textContent)
 
 function sum(a,b){
@@ -17,6 +22,10 @@ var Num6 = document.getElementById('Num6');
 var Num7 = document.getElementById('Num7');
 var Num8 = document.getElementById('Num8');
 var Num9 = document.getElementById('Num9');
+
+var clear = document.getElementById('clear');
+
+clear.addEventListener('click', function() {currentInput.textContent = 0;}, false);
 
 
 Num1.addEventListener('click', function() {currentInput.textContent = 1;}, false);

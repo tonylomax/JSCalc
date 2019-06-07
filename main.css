@@ -18,7 +18,7 @@
 
 
     }
-    #AC {
+    #clear {
         grid-column: 1/ 4;
     }
     #num0 {
@@ -44,7 +44,7 @@
         align-self: center;
     } 
 
-    #AC, #decimal {
+    #clear, #decimal {
         justify-self: center;
         background-color: lightblue;
         align-self: center;
