@@ -1,12 +1,15 @@
  let currentInput = document.getElementById("input")
 
-let sumConstantOne = 0  
-let sumConstantTwo = 0
+let operandOne = 0  
+let operandTwo = 0
 
 
 
 
-function sum(a,b){
+function sum(operandOne,operator, operandTwo){
+    if operator = times {
+        
+    }
     
 }
 
@@ -21,10 +24,19 @@ var Num6 = document.getElementById('Num6');
 var Num7 = document.getElementById('Num7');
 var Num8 = document.getElementById('Num8');
 var Num9 = document.getElementById('Num9');
-
 var clear = document.getElementById('clear');
 
-clear.addEventListener('click', function() {currentInput.textContent = 0;}, false);
+
+var divide = document.getElementById('divide');
+var plus = document.getElementById('plus');
+var minus = document.getElementById('minus');
+var times = document.getElementById('times');
+
+
+
+
+
+clear.addEventListener('click', function() {currentInput.textContent = 0;  sumConstantOne = 0; sumConstantTwo = 0; }, false);
 
 
 Num1.addEventListener('click', function() {if (currentInput.textContent == 0) {currentInput.textContent = 1}
