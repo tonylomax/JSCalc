@@ -6,12 +6,12 @@ let operandTwo = 0
 
 
 
-function sum(operandOne,operator, operandTwo){
+/*function sum(operandOne,operator, operandTwo){
     if operator = times {
-        
+
     }
     
-}
+}*/
 
 
 
@@ -36,7 +36,8 @@ var times = document.getElementById('times');
 
 
 
-clear.addEventListener('click', function() {currentInput.textContent = 0;  sumConstantOne = 0; sumConstantTwo = 0; }, false);
+clear.addEventListener('click', function() {currentInput.textContent = 0; 
+     sumConstantOne = 0; sumConstantTwo = 0; }, false)
 
 
 Num1.addEventListener('click', function() {if (currentInput.textContent == 0) {currentInput.textContent = 1}
