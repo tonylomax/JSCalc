@@ -5,7 +5,6 @@ let sumConstantTwo = 0
 
 
 
-console.log(currentInput.textContent)
 
 function sum(a,b){
     
@@ -28,9 +27,27 @@ var clear = document.getElementById('clear');
 clear.addEventListener('click', function() {currentInput.textContent = 0;}, false);
 
 
-Num1.addEventListener('click', function() {currentInput.textContent = 1;}, false);
+Num1.addEventListener('click', function() {if (currentInput.textContent == 0) {currentInput.textContent = 1}
+else if (currentInput.textContent != 0) {currentInput.textContent += 1}
+}, false);
+
+
+
 Num2.addEventListener('click', function() {currentInput.textContent = 2;}, false);
 
-function wellNamedFunction() {
 
+
+function sum(a,b){
+    
 }
+
+
+function wellNamedFunction() {
+    if (currentInput.textContent == 0) {
+
+
+    }
+}
+
+
+
