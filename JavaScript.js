@@ -25,8 +25,6 @@ var Num7 = document.getElementById('Num7');
 var Num8 = document.getElementById('Num8');
 var Num9 = document.getElementById('Num9');
 var clear = document.getElementById('clear');
-
-
 var divide = document.getElementById('divide');
 var plus = document.getElementById('plus');
 var minus = document.getElementById('minus');
@@ -34,19 +32,35 @@ var times = document.getElementById('times');
 
 
 
-
-
 clear.addEventListener('click', function() {currentInput.textContent = 0; 
      sumConstantOne = 0; sumConstantTwo = 0; }, false)
 
 
-Num1.addEventListener('click', function() {if (currentInput.textContent == 0) {currentInput.textContent = 1}
-else if (currentInput.textContent != 0) {currentInput.textContent += 1}
-}, false);
+
+function numButton(num) {
+    if (currentInput.textContent == 0) 
+        {currentInput.textContent = num}
+    else if (currentInput.textContent != 0) 
+        {currentInput.textContent += num}
+}
 
 
 
-Num2.addEventListener('click', function() {currentInput.textContent = 2;}, false);
+
+Num1.addEventListener('click', () => { numButton(1)}, false);
+Num2.addEventListener('click', () => { numButton(2)}, false);
+Num3.addEventListener('click', () => { numButton(3)}, false);
+Num3.addEventListener('click', () => { numButton(3)}, false);
+Num4.addEventListener('click', () => { numButton(4)}, false);
+Num5.addEventListener('click', () => { numButton(5)}, false);
+Num6.addEventListener('click', () => { numButton(6)}, false);
+Num7.addEventListener('click', () => { numButton(7)}, false);
+Num8.addEventListener('click', () => { numButton(8)}, false);
+Num9.addEventListener('click', () => { numButton(9)}, false);
+
+
+
+
 
 
 
