@@ -29,6 +29,7 @@ var divide = document.getElementById('divide');
 var plus = document.getElementById('plus');
 var minus = document.getElementById('minus');
 var times = document.getElementById('times');
+var decimal = document.getElementById('decimal');
 
 
 
@@ -42,14 +43,20 @@ function numButton(num) {
         {currentInput.textContent = num}
     else if (currentInput.textContent != 0) 
         {currentInput.textContent += num}
-}
+    }    
 
+ //if there isn't a decimal somewhere in it, add it.iF IT IS, ignore it.   
 
+function point() { 
+        if (currentInput.innerHTML.indexOf('.'  == -1)) {
+            currentInput.textContent += '.'
+        }
+        
+    }
 
 
 Num1.addEventListener('click', () => { numButton(1)}, false);
 Num2.addEventListener('click', () => { numButton(2)}, false);
-Num3.addEventListener('click', () => { numButton(3)}, false);
 Num3.addEventListener('click', () => { numButton(3)}, false);
 Num4.addEventListener('click', () => { numButton(4)}, false);
 Num5.addEventListener('click', () => { numButton(5)}, false);
@@ -57,7 +64,9 @@ Num6.addEventListener('click', () => { numButton(6)}, false);
 Num7.addEventListener('click', () => { numButton(7)}, false);
 Num8.addEventListener('click', () => { numButton(8)}, false);
 Num9.addEventListener('click', () => { numButton(9)}, false);
+Num0.addEventListener('click', () => { numButton(0)}, false);
 
+decimal.addEventListener('click', () => {point()}, false);
 
 
 
