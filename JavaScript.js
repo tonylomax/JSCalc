@@ -47,12 +47,7 @@ function numButton(num) {
 
  //if there isn't a decimal somewhere in it, add it.iF IT IS, ignore it.   
 
-function point() { 
-        if (currentInput.innerHTML.indexOf('.'  == -1)) {
-            currentInput.textContent += '.'
-        }
-        
-    }
+
 
 
 Num1.addEventListener('click', () => { numButton(1)}, false);
@@ -65,13 +60,11 @@ Num7.addEventListener('click', () => { numButton(7)}, false);
 Num8.addEventListener('click', () => { numButton(8)}, false);
 Num9.addEventListener('click', () => { numButton(9)}, false);
 Num0.addEventListener('click', () => { numButton(0)}, false);
+decimal.addEventListener('click', function point() {
+    if (!currentInput.innerHTML.includes('.')) {
+        currentInput.textContent += '.'}}, false);
 
-decimal.addEventListener('click', () => {point()}, false);
-
-
-
-
-
+        
 
 function sum(a,b){
     
