@@ -2,7 +2,7 @@
 
 let operandOne = 0
 let operandTwo = 0
-let operator = null
+let operator = 0
 
 let Num1 = document.getElementById('Num1');
 let Num2 = document.getElementById('Num2');
@@ -24,32 +24,42 @@ let decimal = document.getElementById('decimal');
 
 
 function sum(op){
-        
-    if (op = "+") {
-        operator = 1
-        firstNUm = currentInput.textContent
-    }
+    operandOne = currentInput.textContent
     currentInput.textContent = 0
+    if (op == "+") {
+        operator = 1 
+    }
+    else if (op == "-") {
+        operator = 2
+    }
+    else if (op == "*") {
+        operator = 3
+    }
+
+    else if (op == "/") {
+        operator = 4
+    }
+
 }
 
 
 
-
 function answer(operator) {
-    secondNum = currentInput.textContent  
-    if (operator = 1) {
-        currentInput.textContent =  (parseInt(firstNUm) + parseInt(secondNum))  
+    operandTwo = currentInput.textContent  
+    if (operator == 1) {
+        currentInput.textContent =  (parseInt(operandOne) + parseInt(operandTwo))  
     }
-    else if (operator = "-") {
-        return firstNUm - secondNum
+    else if (operator == 2) {
+        currentInput.textContent =  (parseInt(operandOne) - parseInt(operandTwo))  
     }
-    else if (operator = "/") {
-        return firstNUm / secondNum
+    else if (operator == 3) {
+        currentInput.textContent =  (parseInt(operandOne) * parseInt(operandTwo))  
     }
 
-    else if (operator = "*") {
-        return firstNUm * secondNum
+    else if (operator == 4) {
+        currentInput.textContent =  (parseInt(operandOne) / parseInt(operandTwo))  
     }
+    operator = 0; operandOne = 0; operandTwo = 0;
 }   
 
 
@@ -74,8 +84,9 @@ Num8.addEventListener('click', () => { numButton(8)}, false);
 Num9.addEventListener('click', () => { numButton(9)}, false);
 Num0.addEventListener('click', () => { numButton(0)}, false);
 plus.addEventListener('click', () => { sum('+')}, false);
-
-
+minus.addEventListener('click', () => { sum("-")}, false);
+times.addEventListener('click', () => { sum('*')}, false);
+divide.addEventListener('click', () => { sum('/')}, false);
 equals.addEventListener('click', () => { answer(operator)}, false);
 
 
@@ -87,7 +98,7 @@ decimal.addEventListener('click', function point() {
 
 
 clear.addEventListener('click', function() {currentInput.textContent = 0; 
-            sumConstantOne = 0; sumConstantTwo = 0; }, false)
+            operandOne = 0; operandTwo = 0; operator = null}, false)
        
        
   
