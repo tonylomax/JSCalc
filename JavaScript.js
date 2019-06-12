@@ -1,4 +1,4 @@
- let currentInput = document.getElementById("input")
+let currentInput = document.getElementById("input")
 
 let operandOne = 0
 let operandTwo = 0
@@ -47,29 +47,28 @@ function sum(op){
 function answer(operator) {
     operandTwo = currentInput.textContent  
     if (operator == 1) {
-        currentInput.textContent =  (parseInt(operandOne) + parseInt(operandTwo))  
+        currentInput.textContent = Math.round( (parseFloat(operandOne) + parseFloat(operandTwo)) * 10000 ) / 10000
     }
     else if (operator == 2) {
-        currentInput.textContent =  (parseInt(operandOne) - parseInt(operandTwo))  
+        currentInput.textContent = Math.round( (parseFloat(operandOne) - parseFloat(operandTwo))  * 10000) / 10000
     }
     else if (operator == 3) {
-        currentInput.textContent =  (parseInt(operandOne) * parseInt(operandTwo))  
+        currentInput.textContent = Math.round( (parseFloat(operandOne) * parseFloat(operandTwo))  * 1000) /1000
     }
 
     else if (operator == 4) {
-        currentInput.textContent =  (parseInt(operandOne) / parseInt(operandTwo))  
+        currentInput.textContent = Math.round( (parseFloat(operandOne) / parseFloat(operandTwo))  * 10000) /10000
     }
     operator = 0; operandOne = 0; operandTwo = 0;
 }   
 
 
-
-
 function numButton(num) {
-    if (currentInput.textContent == 0) 
-        {currentInput.textContent = num}
-    else if (currentInput.textContent != 0) 
+    
+     if (currentInput.textContent != 0 || currentInput.textContent.includes(".")) 
         {currentInput.textContent += num}
+     else if (currentInput.textContent == 0) 
+        {currentInput.textContent = num}   
     }    
 
 
@@ -91,7 +90,6 @@ equals.addEventListener('click', () => { answer(operator)}, false);
 
 
 
-
 decimal.addEventListener('click', function point() {
     if (!currentInput.innerHTML.includes('.')) {
         currentInput.textContent += '.'}}, false);
@@ -100,9 +98,4 @@ decimal.addEventListener('click', function point() {
 clear.addEventListener('click', function() {currentInput.textContent = 0; 
             operandOne = 0; operandTwo = 0; operator = null}, false)
        
-       
-  
-
-
-
-
+      
