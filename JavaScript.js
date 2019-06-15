@@ -88,7 +88,7 @@ times.addEventListener('click', () => { sum('*')}, false);
 divide.addEventListener('click', () => { sum('/')}, false);
 equals.addEventListener('click', () => { answer(operator)}, false);
 
-
+    
 
 
 decimal.addEventListener('click', function point() {

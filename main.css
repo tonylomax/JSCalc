@@ -11,6 +11,9 @@
     grid-gap: 1px;
     }
     
+    body {
+        font-family: sans-serif;
+    }
 
 
     #input {
@@ -45,14 +48,16 @@
 
     #num1, #num2, #num3, #num4, #num5, #num6, #num7, #num8, #num9 {
         background-color: #202325;
-        border: 2px solid #202325;
         color: white;
         display: flex;
         align-items: center;
         justify-content: center;    
     }
 
-
+    #num1:hover, #num2:hover, #num3:hover, #num4:hover,
+    #num5:hover, #num6:hover, #num7:hover, #num8:hover, #num9:hover {
+        background-color: #202325ad;
+    }
 
     
 
@@ -68,6 +73,7 @@
         align-items: center;
         justify-content: center; 
         margin-right: 3%;
+        font-weight: bold;
     } 
 
     #decimal {
