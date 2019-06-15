@@ -67,7 +67,7 @@
         display: flex;
         align-items: center;
         justify-content: center;    
-        cursor: pointer;
+        cursor: pointer;    
     }
 
     #num1:hover, #num2:hover, #num3:hover, #num4:hover,
