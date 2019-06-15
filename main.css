@@ -31,7 +31,11 @@
         display: flex;
         align-items: center;
         justify-content: center;  
+        cursor: pointer;
+    }
 
+    #clear:hover{
+        background-color: #202325ad;
     }
 
 
@@ -43,7 +47,11 @@
         display: flex;
         align-items: center;
         justify-content: center; 
+        cursor: pointer;
+    }
 
+    #num0:hover {
+        background-color: #202325ad;
     }
 
     #num1, #num2, #num3, #num4, #num5, #num6, #num7, #num8, #num9 {
@@ -52,11 +60,12 @@
         display: flex;
         align-items: center;
         justify-content: center;    
+        cursor: pointer;
     }
 
     #num1:hover, #num2:hover, #num3:hover, #num4:hover,
     #num5:hover, #num6:hover, #num7:hover, #num8:hover, #num9:hover {
-        background-color: #202325ad;
+        background-color: #202325ad;    
     }
 
     
@@ -74,7 +83,12 @@
         justify-content: center; 
         margin-right: 3%;
         font-weight: bold;
+        cursor: pointer;
     } 
+
+    #plus:hover, #minus:hover, #times:hover, #divide:hover, #equals:hover {
+        background-color: #4C5796ad;
+    }
 
     #decimal {
         grid-column: 3/4; 
@@ -84,6 +98,11 @@
         display: flex;
         align-items: center;
         justify-content: center; 
+        cursor: pointer;
+    }
+
+    #decimal:hover {
+        background-color: #202325ad;
     }
 
 
