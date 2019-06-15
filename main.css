@@ -1,4 +1,11 @@
-    .container {
+@font-face {
+    font-family: 'digital-7regular';
+    src: url('/digital-7-font/digital-7-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
     font-size: 2rem;
     width: 400px;
     height: 500px;
@@ -17,6 +24,7 @@
 
 
     #input {
+        font-family: 'digital-7regular';
         grid-column: 1/ 5;
         font-size: 3rem;
         text-align: right;
