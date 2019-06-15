@@ -90,6 +90,7 @@ equals.addEventListener('click', () => { answer(operator)}, false);
 
 
 
+
 decimal.addEventListener('click', function point() {
     if (!currentInput.innerHTML.includes('.')) {
         currentInput.textContent += '.'}}, false);

@@ -7,20 +7,28 @@
     grid-template-rows: repeat(5, 16.5%);  
     border: 5px solid black;
     margin-top: 5%;
+    margin-left: 5%;
+    grid-gap: 1px;
     }
     
+
 
     #input {
         grid-column: 1/ 5;
         font-size: 3rem;
         text-align: right;
-        margin-right: 5%;     
+        margin-right: 5%;   
+        margin-top: 5%  
     }
 
     #clear {
         grid-column: 1/ 4; 
         background-color: #202325;
         color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+
     }
 
 
@@ -29,13 +37,22 @@
         background-color: #202325;
         border: 2px solid #202325;
         color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+
     }
 
     #num1, #num2, #num3, #num4, #num5, #num6, #num7, #num8, #num9 {
         background-color: #202325;
         border: 2px solid #202325;
         color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;    
     }
+
+
 
     
 
@@ -47,7 +64,10 @@
     #plus, #minus, #times, #divide, #equals {
         background-color: #4C5796;
         color: white;
-
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        margin-right: 3%;
     } 
 
     #decimal {
@@ -55,6 +75,11 @@
         background-color: #202325;
         color: white;
         border: 2px solid #202325;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
     }
+
+
 
 
