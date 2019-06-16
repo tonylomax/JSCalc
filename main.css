@@ -1,9 +1,12 @@
 @font-face {
     font-family: 'digital-7regular';
-    src: url('/digital-7-font/digital-7-webfont.woff') format('woff');
+    src: url('/digital-7-font/digital-7-webfont.woff1') format('woff1'),
+    url('/digital-7-font/digital-7-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
+
+
 
 .container {
     font-size: 2rem;
