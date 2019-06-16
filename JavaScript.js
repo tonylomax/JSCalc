@@ -29,9 +29,15 @@ function sum(op){
     if (op == "+") {
         operator = 1 
     }
+
+    else if (op == "-" && operandOne == 0) {
+        currentInput.textContent = "-"
+    }
+
     else if (op == "-") {
         operator = 2
     }
+    
     else if (op == "*") {
         operator = 3
     }
@@ -39,6 +45,8 @@ function sum(op){
     else if (op == "/") {
         operator = 4
     }
+    
+
 
 }
 
