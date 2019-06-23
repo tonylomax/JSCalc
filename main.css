@@ -25,15 +25,26 @@
         font-family: sans-serif;
     }
 
-
-    #input {
+    .display {
         font-family: 'digital-7regular';
         grid-column: 1/ 5;
-        font-size: 3rem;
-        text-align: right;
         margin-right: 5%;   
-        margin-top: 5%;  
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+        text-align: right;
     }
+
+   
+    #sum {
+    }
+
+    #input {
+        font-size: 3rem;
+
+    }
+
+
+    
 
     #clear {
         grid-column: 1/ 4; 

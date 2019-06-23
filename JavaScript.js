@@ -20,14 +20,16 @@ let plus = document.getElementById('plus');
 let minus = document.getElementById('minus');
 let times = document.getElementById('times');
 let decimal = document.getElementById('decimal');
-
+let calucation = document.getElementById('sum');
 
 
 function sum(op){
     operandOne = currentInput.textContent
+    calucation.textContent = operandOne
     currentInput.textContent = 0
     if (op == "+") {
-        operator = 1 
+        operator = 1;
+        calucation.textContent += "+" 
     }
 
     else if (op == "-" && operandOne == 0) {
@@ -36,24 +38,25 @@ function sum(op){
 
     else if (op == "-") {
         operator = 2
+        calucation.textContent += "-" 
     }
     
     else if (op == "*") {
         operator = 3
+        calucation.textContent += "*" 
     }
 
     else if (op == "/") {
         operator = 4
+        calucation.textContent += "/" 
     }
-    
-
-
 }
 
 
 
 function answer(operator) {
-    operandTwo = currentInput.textContent  
+    operandTwo = currentInput.textContent
+    calucation.textContent += operandTwo
     if (operator == 1) {
         currentInput.textContent = Math.round( (parseFloat(operandOne) + parseFloat(operandTwo)) * 10000 ) / 10000
     }
@@ -105,6 +108,6 @@ decimal.addEventListener('click', function point() {
 
 
 clear.addEventListener('click', function() {currentInput.textContent = 0; 
-            operandOne = 0; operandTwo = 0; operator = null}, false)
+           calucation.textContent = 0; operandOne = 0; operandTwo = 0; operator = null}, false)
        
       
