@@ -22,16 +22,22 @@ let times = document.getElementById('times');
 let decimal = document.getElementById('decimal');
 let calucation = document.getElementById('sum');
 
-if (calucation.textContent == 0) {
-    calucation.style.color = 'white'
-}  
+let symbols = ["+","-","*","/"];
+
 
 function sum(op){
-    operandOne = currentInput.textContent
-    calucation.textContent = operandOne
-    currentInput.textContent = 0
-
     
+    
+    if( (symbols.some(symbol => calucation.textContent.split("").indexOf(symbol) == calucation.textContent.split("").length -1))) {
+        calucation.textContent = (operandOne)
+    }
+
+    else { operandOne = currentInput.textContent;
+        calucation.textContent = operandOne;
+        currentInput.textContent = 0;}
+
+
+
     if (op == "+") {
         operator = 1;
         calucation.textContent += "+" 
@@ -59,6 +65,8 @@ function sum(op){
     if (calucation.textContent !== 0) {
         calucation.style.color = 'black'
     }  
+
+   
 }
 
 
@@ -114,6 +122,10 @@ decimal.addEventListener('click', function point() {
     if (!currentInput.innerHTML.includes('.')) {
         currentInput.textContent += '.'}}, false);
 
+if (calucation.textContent == 0) {
+    calucation.style.color = 'white'
+}  
+        
 
 clear.addEventListener('click', function() {currentInput.textContent = 0; 
            calucation.textContent = 0; operandOne = 0; operandTwo = 0; operator = null; calucation.style.color = 'white'
