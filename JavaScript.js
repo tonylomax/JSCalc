@@ -21,9 +21,10 @@ let decimal = document.getElementById('decimal');
 let calucation = document.getElementById('sum');
 let symbols = ["+","-","*","/"];
 
-function sum(op){
-   let calcArray =  calucation.textContent.split("")
 
+function sum(op){
+   let calcArray = calucation.textContent.split("")
+  
     if((symbols.some(symbol => calcArray.indexOf(symbol) == calcArray.length -1)))  {
         calucation.textContent = (operandOne)
     }
@@ -67,9 +68,12 @@ function sum(op){
 
 
 
+
+
 function answer(operator) {
     operandTwo = currentInput.textContent
     calucation.textContent += operandTwo
+
     if (operator == 1) {
         currentInput.textContent = Math.round( (parseFloat(operandOne) + parseFloat(operandTwo)) * 10000 ) / 10000
     }
