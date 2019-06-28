@@ -1,9 +1,7 @@
 let currentInput = document.getElementById("input")
-
 let operandOne = 0
 let operandTwo = 0
 let operator = 0
-
 let Num1 = document.getElementById('Num1');
 let Num2 = document.getElementById('Num2');
 let Num3 = document.getElementById('Num3');
@@ -21,14 +19,12 @@ let minus = document.getElementById('minus');
 let times = document.getElementById('times');
 let decimal = document.getElementById('decimal');
 let calucation = document.getElementById('sum');
-
 let symbols = ["+","-","*","/"];
 
-
 function sum(op){
-    
-    
-    if( (symbols.some(symbol => calucation.textContent.split("").indexOf(symbol) == calucation.textContent.split("").length -1))) {
+   let calcArray =  calucation.textContent.split("")
+
+    if((symbols.some(symbol => calcArray.indexOf(symbol) == calcArray.length -1)))  {
         calucation.textContent = (operandOne)
     }
 
@@ -66,7 +62,7 @@ function sum(op){
         calucation.style.color = 'black'
     }  
 
-   
+
 }
 
 
@@ -88,6 +84,10 @@ function answer(operator) {
         currentInput.textContent = Math.round( (parseFloat(operandOne) / parseFloat(operandTwo))  * 10000) /10000
     }
     operator = 0; operandOne = 0; operandTwo = 0;
+
+    if (calucation.textContent !== 0) {
+        calucation.style.color = 'black'
+    }  
 }   
 
 
