@@ -18,26 +18,26 @@ let plus = document.getElementById('plus');
 let minus = document.getElementById('minus');
 let times = document.getElementById('times');
 let decimal = document.getElementById('decimal');
-let calucation = document.getElementById('sum');
+let calculation = document.getElementById('sum');
 let symbols = ["+","-","*","/"];
 
 
 function sum(op){
-   let calcArray = calucation.textContent.split("")
+   let calcArray = calculation.textContent.split("")
   
     if((symbols.some(symbol => calcArray.indexOf(symbol) == calcArray.length -1)))  {
-        calucation.textContent = (operandOne)
+        calculation.textContent = (operandOne)
     }
 
     else { operandOne = currentInput.textContent;
-        calucation.textContent = operandOne;
+        calculation.textContent = operandOne;
         currentInput.textContent = 0;}
 
 
 
     if (op == "+") {
         operator = 1;
-        calucation.textContent += "+" 
+        calculation.textContent += "+" 
     }
 
     else if (op == "-" && operandOne == 0) {
@@ -46,21 +46,21 @@ function sum(op){
 
     else if (op == "-") {
         operator = 2
-        calucation.textContent += "-" 
+        calculation.textContent += "-" 
     }
     
     else if (op == "*") {
         operator = 3
-        calucation.textContent += "*" 
+        calculation.textContent += "*" 
     }
 
     else if (op == "/") {
         operator = 4
-        calucation.textContent += "/" 
+        calculation.textContent += "/" 
     }
 
-    if (calucation.textContent !== 0) {
-        calucation.style.color = 'black'
+    if (calculation.textContent !== 0) {
+        calculation.style.color = 'black'
     }  
 
 
@@ -72,7 +72,7 @@ function sum(op){
 
 function answer(operator) {
     operandTwo = currentInput.textContent
-    calucation.textContent += operandTwo
+    calculation.textContent += operandTwo
 
     if (operator == 1) {
         currentInput.textContent = Math.round( (parseFloat(operandOne) + parseFloat(operandTwo)) * 10000 ) / 10000
@@ -89,8 +89,8 @@ function answer(operator) {
     }
     operator = 0; operandOne = 0; operandTwo = 0;
 
-    if (calucation.textContent !== 0) {
-        calucation.style.color = 'black'
+    if (calculation.textContent !== 0) {
+        calculation.style.color = 'black'
     }  
 }   
 
@@ -126,13 +126,13 @@ decimal.addEventListener('click', function point() {
     if (!currentInput.innerHTML.includes('.')) {
         currentInput.textContent += '.'}}, false);
 
-if (calucation.textContent == 0) {
-    calucation.style.color = 'white'
+if (calculation.textContent == 0) {
+    calculation.style.color = 'white'
 }  
         
 
 clear.addEventListener('click', function() {currentInput.textContent = 0; 
-           calucation.textContent = 0; operandOne = 0; operandTwo = 0; operator = null; calucation.style.color = 'white'
+           calculation.textContent = 0; operandOne = 0; operandTwo = 0; operator = null; calculation.style.color = 'white'
         }, false)
        
       
